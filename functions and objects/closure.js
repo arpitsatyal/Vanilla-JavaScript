@@ -1,21 +1,26 @@
-let a = "welocme"
-function music(listener){
-    let guitar = 556
-    let band = "gDay"
-    console.log(a + " " + listener + " " + "you are lsitenig to" + " " + band )
-    
-}
-music("arpit")
-
-//aba chai closure
-
-let b = "welcome"
-function film(watcher){
-    let actor = "de nerio"
-    function filmName(name){  //closure //closure cannot be accessed globallly; only inside the parent function
-        let film = "taxi driver"
-        console.log(a + " " + watcher + " " + "u are watching" + " " + film )
+function welcome(name){
+    let inner = " to "
+    let innerF = function innerFunc(location){
+        let hi = "helo"
+        let text = hi + " " + name + " " + "welcome" + inner + location
+        return text
     }
-    filmName('taxi driver')
+    /*let innerRes = innerFunc('nepal') //this way memory is allocated
+    console.log('>>', innerRes)
+    return innerRes*/ 
+    return innerF; //this way we save from unwanted memory allocation 
+
 }
-film("arpit")
+ let res = welcome('arpit')
+console.log('>>', res('ktm')) //acessing closure fn outside the block ktm ta location ma patha ho ni ta
+
+function makeAdjectifier(name){
+    return function abc(string){
+        return name + string
+    }
+
+} 
+let abc = makeAdjectifier('arpit')
+abc('cool')
+
+
