@@ -21,16 +21,14 @@ class User {
 }
 
 class Admin extends User {
-	// if we have a constructor in the child class then its constructor will run not the parent's so we need to define all the properties defined in the child class again 
-	//super() runs the parent class's constructor to set up properties for child class as well.
-	constructor(username, email, role) {
+		constructor(username, email, role) {
 		super(username, email)
 		this.role = role
 	}
 	deleteUser(todelete) {
 		for (let i = 0; i < users.length; i++) {
 			if (users[i] === todelete)
-				users.splice(i, 1)
+				users.splice(i, 4)
 		}
 	}
 }
@@ -43,5 +41,8 @@ const admin = new Admin('arpit', 'arpited7@gmail.com', 'manager')
 
 console.log(admin.login().incScore().logout())
 let users = [userOne, userTwo, userThree, userFour]
-admin.deleteUser(userThree)
+admin.deleteUser(userOne)
 console.log('remaining users', users)
+
+// if we have a constructor in the child class then its constructor will run not the parent's so we need to define all the properties defined in the child class again 
+//super() runs the parent class's constructor to set up properties for child class as well.
