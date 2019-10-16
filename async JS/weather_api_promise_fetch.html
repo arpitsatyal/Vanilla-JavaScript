@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Fetch Promise </title>
+</head>
+<body>
+<script>
+	function getWeather(woeid){
+	fetch(`https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`,{mode: 'no-cors'})
+//fetch always returns a promise
+.then(data => {
+	console.log(data)
+	return data.json()
+	// json also returns a promise so we handle that by chaining
+})
+.then(result => {
+const today = result.consolidated_weather[0]
+console.log(`temperature in ${result.title} stay between ${today.min_temp} and ${today.max_temp}`)
+})
+.catch(error => console.log(error))	
+}
+getWeather(2487956)
+</script>
+</body>
+</html>
+
