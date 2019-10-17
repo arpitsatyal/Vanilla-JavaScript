@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<style>
+	.error {
+		padding: 10px;
+		color: crimson;
+		border: 1px dotted crimson;
+	}
+	.success {
+		padding: 10px;
+		color: limegreen;
+		border: 1px dotted limegreen;
+	}
+	.nothing {
+		padding: 10px;
+		color: blue;
+		border: 1px dotted blue;
+	}
+</style>
+
+
+<h1 class="title"> the DOM </h1>
+<p>error arpit </p>
+<p>success arpit </p>
+<p> arpit </p>
+<p> arpit </p>
+<p>error arpit </p>
+<p>success arpit </p>
+
+
+<script>
+	let contents = document.querySelectorAll('p')
+contents.forEach(content => {
+	if(content.textContent.includes('error')) {
+		content.classList.add('error')
+	} else if(content.textContent.includes('success')) {
+		content.classList.add('success')
+	} else {
+		content.classList.add('nothing')
+	}
+})
+
+const title = document.querySelector('.title')
+title.classList.toggle('test')
+
+</script>
+</body>
+</html>

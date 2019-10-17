@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<article> 
+	<h2> article title </h2>
+	<p> fuck my life </p>
+	<p> fuck my life2 </p>
+	<p> fuck my life </p>
+	<p> fuck my life </p>
+	<div> written by me </div>
+</article>
+
+<script>
+
+	//finding childrens
+	const articles = document.querySelector('article')
+	// converting htmlDocuments to array
+	Array.from(articles.children).forEach(child => {
+child.classList.add('article-element')
+	})
+
+//finding parents and parents parents
+	const title = document.querySelector('h2')
+	console.log(title.parentElement.parentElement.parentElement)
+
+	// finding siblings
+	console.log(title.nextElementSibling.nextElementSibling)
+
+	console.log(title.nextElementSibling.parentElement.children)
+
+</script>
+</body>
+</html>
