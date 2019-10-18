@@ -1,5 +1,9 @@
 // ok lets try this weird looking thing out...
 
+//
+let people =['ram', 'krishna', 'gopi']
+console.log(...people) //outputs ram krishna gopi
+
 // spread operators are used to , 
 // 1. copy array
 //also copy anything 
