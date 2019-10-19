@@ -1,4 +1,4 @@
-let arr = [1,5,7,3,9,4]
+let arr = [1,5,7,3,9,4,8]
 
 
 // x=== first element to compare
