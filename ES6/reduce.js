@@ -1,9 +1,6 @@
 //to compute an array to a single value
 
-//lets try to add all the elements in the array
-
-
-let arr = [10,20,30,40,50]
+//lets try to add all the elements in the arraylet arr = [10,20,30,40,50]
 
 let result = arr.reduce((sum,el)=>{
 	// console.log(sum,el)
