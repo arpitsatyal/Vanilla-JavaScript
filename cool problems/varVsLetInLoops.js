@@ -1,8 +1,5 @@
 for(let i=0; i<3; i++){
-	setTimeout(()=>{
-		console.log(i)
-
-	},1000)
+	setTimeout(()=>console.log(i) ,1000)
 }
 
 // output = 0 1 2
@@ -15,9 +12,7 @@ for(let i=0; i<3; i++){
 // lets try that out with var
 // and now some magic happens....
 for( var i=0; i<3;i++){
-	setTimeout(()=>{
-		console.log(i)
-	},1000)
+	setTimeout(()=> console.log(i) ,1000)
 } 
 
 //////// output = 3 3 3 
