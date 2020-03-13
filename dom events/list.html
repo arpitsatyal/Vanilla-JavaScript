@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul class="x">
+</ul>
+
+<script>
+	let ul = document.querySelector('.x')
+	function render (items) {
+		items.forEach(item => {
+			let li = document.createElement('li')
+			li.textContent = item
+			ul.appendChild(li)
+		})
+	}
+	render(['a', 'b'])
+</script>
+</body>
+</html>
