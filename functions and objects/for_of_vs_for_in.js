@@ -19,11 +19,11 @@ for (key in arr) {
 	console.log(key) //prints all the indexes of the array
 }
 
+// for of loop
 for (let x of arr) {
 	console.log(x) //prints all the values of the array
 }
 
-// for of loop
 for (let x of obj) {
 	console.log(x) 
 }
