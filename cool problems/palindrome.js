@@ -7,9 +7,9 @@ function palindrome(input){
 for(let i=0;i<input.length;i++){
 	str2 = str2 + arr.pop()
 }
-input === str2 ? console.log(`${input} is palindrome`) : console.log(`${input} isnot a palindrome`)
+return input === str2 ? console.log(`${input} is palindrome`) : console.log(`${input} is not a palindrome`)
 }
-// palindrome("racecar")
+// palindrome(121)
 
 function palindrome2(text) {
 let charArray = text.split('');
@@ -21,6 +21,7 @@ return letter === charArray[charArray.length - index - 1];
 
 return result
 }
-console.log(palindrome2("racecar"))
-
+// console.log(palindrome2("racecar"))
 //every check every element of the array and returns a boolean value
+
+
