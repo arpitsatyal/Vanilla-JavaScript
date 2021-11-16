@@ -4,6 +4,7 @@ function commonPrefix(arr) {
     // first, get the first word and comparision index
     let comparisionWord = arr[0]
     let comparisionIndex = 0
+    //compare every element in the first word to every element in the remaining words
     // loop over each char of first word
     for (let comparisionLetter of comparisionWord) {
         // loop over remaining words
@@ -17,7 +18,7 @@ function commonPrefix(arr) {
                 return longest
             }
         }
-        // increment the index outside of the for and inside the for of loop
+        // increment the index after one character is finished comparing.
         comparisionIndex++
         longest += comparisionLetter
     }

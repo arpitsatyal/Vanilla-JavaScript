@@ -12,8 +12,12 @@ let printName =  function(name) {
 	return name
 }
 
-var x = 23 //if we use let we get error
-
+var x = 23 
+//if we use let we get error
+// We get a new kind of error, its not a ReferenceError, 
+// the engine knows about x but doesn't allow us to use it before its initialized. 
+// The JS engine doesn't allow us to access the variables declared with let and const before they are declared. 
+// This is called Temporal Dead Zone.
 
 // even before first line is executed memory is allocated
 // for all the variables
