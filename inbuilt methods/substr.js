@@ -7,5 +7,6 @@ let str = 'Radio, live transmission. Listen to the silence, let it ring on. Eyes
 
 console.log((str.substr(1,5)))
 
+// o/p = adio,
 // first argument = start index
 // second argument = no of characters to extract
